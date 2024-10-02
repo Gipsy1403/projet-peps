@@ -1,0 +1,229 @@
+@font-face {
+    font-family: "roboto regular";
+    src: url(../font/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: "roboto bold";
+    src: url(../font/Roboto-Bold.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: "roboto regular";
+}
+
+/* Header - navigation */
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    
+}
+
+.container img{
+    width: 50px;
+    
+}
+.main-menu{
+    flex-direction: row;
+    display: flex;
+    
+}
+.main-menu li{
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 1px solid black;
+    letter-spacing: -1px;
+    font-family: "roboto bold";
+ 
+}
+/* header - banner */
+.banner{
+    background-image: url(../image/photo-1556139943-4bdca53adf1e\ 1.jpg);
+    height: 400px;
+    text-transform: uppercase;
+    background-size: cover; /* afin que l'image garde ses proportions aux changements d'écran*/
+    background-position: center;
+    display: flex;
+    flex-direction: column ;
+    justify-content: center ;
+    align-items: center ;
+    text-align: center;
+    font-weight: bold;
+}
+
+.banner h1 {
+    font-weight: 900 ;
+    margin: 0 100px;
+    font-size: 70px;
+    text-shadow: 0px 5px 7px gray;
+    font-family: "roboto bold";
+}
+
+.banner a{
+
+}
+.btn {
+	background-color: rgb(255, 70, 118);
+    border:1px solid rgb(255, 6, 69);
+    color:white;
+    padding:10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size:15px;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: ;
+    transform: scale(1.05);
+}
+
+/* CONTENU - SECTION 1 */
+
+.titresection1 h2{
+   text-align: center;
+   text-transform: uppercase;
+   margin-top: 30px;
+   font-family: "roboto bold";
+}
+.titresection1 p{
+    text-align: center;
+    font-size: 0.8em;
+}
+.section1{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    align-items: center; 
+}
+.photo{
+    background-image: url(../image/visuel\ ntre\ approchue.jpg);
+    width:50%;
+    height: 300px;
+    background-size: cover;    
+}
+.souhait{
+    display: flex;
+    width:50%;
+    flex-direction: column;  
+}
+article{
+    padding-left: 80px;
+    padding-top: 20px;
+}
+article h3{
+    padding-bottom: 20px;
+    text-transform: none;
+}
+article li::before{
+    content: "- ";
+    padding-left: 5px;
+}
+
+/* CONTENU -  LIGNE DE SEPARATION */
+.line{
+    height: 20px;
+    margin: 50px auto;
+    display: block;
+}
+
+/* CONTENU - SECTION 2 */
+
+.method{
+    text-align: center;
+}
+.method h2{
+    text-transform: uppercase;
+    margin: auto;
+    font-family: "roboto bold";
+}
+.method p{
+   font-size: 0.9em;
+}
+
+.method a{
+	background-color: white;
+    border:1px solid rgb(255, 6, 69);
+    color: rgb(255, 70, 118);
+    padding:10px 30px;
+    font-size:15px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: "roboto bold";
+    display: block;
+    margin-top: 30px;
+    margin : 30px 500px;
+}
+
+a:hover {
+    background-color:rgb(255, 70, 118) ;
+    color: white;
+  
+}
+/* CONTENU - COMPETENCE */
+#competence{
+    display: grid;
+    width: 70%;
+    /* height: 30%; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "bloc1 bloc2"
+    "bloc3 bloc4";
+    gap: 5em;
+    align-items: start;
+    margin: auto;
+}
+.bloc1{
+    grid-area: bloc1;
+    display: flex;
+    flex-direction: column;
+}
+.bloc2{
+    grid-area: bloc2;
+    display: flex;
+    flex-direction: column;
+}
+.bloc3{
+    grid-area: bloc3;
+    display: flex;
+    flex-direction: column;
+}
+.bloc4{
+    grid-area: bloc4;
+    display: flex;
+    flex-direction: column;
+}
+
+#competence img{
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+#competence h3{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.9em;
+}
+#competence p{
+    font-size: 0.8em;
+    color: rgb(90, 86, 86);
+    text-align: center;
+}
+.source{
+    font-size: 0.7em;
+    font-style: italic;  
+} 
+
+
