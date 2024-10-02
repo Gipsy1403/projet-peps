@@ -143,9 +143,9 @@ article li::before{
 .method{
     text-align: center;
 }
-.method h2{
+section h2{
     text-transform: uppercase;
-    margin: auto;
+    /* margin: auto; */
     font-family: "roboto bold";
 }
 .method p{
@@ -226,4 +226,33 @@ a:hover {
     font-style: italic;  
 } 
 
+/* CONTENU - ACCOMPAGNEMENTS */
+
+#accompagnement{
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#accompagnement .approche{
+    margin-top: 50px;
+    font-size: 0.8em;
+}
+
+/* CONTENU - PEP'S */
+#peps{
+   
+}
+.talents{
+    position: relative;
+    order: 2;
+}
+.bkgblue{
+    position: absolute;
+    background-color: aqua;
+    width: 200px;
+    height: 20px;
+    order: 1;
+}
 
