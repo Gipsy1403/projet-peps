@@ -89,7 +89,7 @@ body{
     transform: scale(1.05);
 }
 
-/* CONTENU - SECTION 1 */
+/* CONTENU - NOTRE APPROCHE */
 
 .titresection1 h2{
    text-align: center;
@@ -105,28 +105,27 @@ body{
     display: flex;
     flex-direction: row;
     margin-top: 5%;
-    align-items: center; 
+    justify-content: center;
 }
 .photo{
     background-image: url(../image/visuel\ ntre\ approchue.jpg);
-    width:50%;
-    height: 300px;
-    background-size: cover;    
+    width:25%;
+    background-repeat: no-repeat;
 }
 .souhait{
     display: flex;
     width:50%;
     flex-direction: column;  
 }
-article{
+.content_souhait{
     padding-left: 80px;
     padding-top: 20px;
 }
-article h3{
+.content_souhait h3{
     padding-bottom: 20px;
     text-transform: none;
 }
-article li::before{
+.content_souhait li::before{
     content: "- ";
     padding-left: 5px;
 }
@@ -140,30 +139,29 @@ article li::before{
 
 /* CONTENU - SECTION 2 */
 
-.method{
+#method{
+    width: 60%;
+    margin: 0 auto;
     text-align: center;
 }
-section h2{
+#method h2{
     text-transform: uppercase;
-    /* margin: auto; */
     font-family: "roboto bold";
+    margin: 2rem 0;
 }
 .method p{
    font-size: 0.9em;
 }
 
-.method a{
+.btn{
 	background-color: white;
     border:1px solid rgb(255, 6, 69);
     color: rgb(255, 70, 118);
-    padding:10px 30px;
-    font-size:15px;
+    padding:0.5rem 2rem;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 3px;
     font-family: "roboto bold";
-    display: block;
-    margin-top: 30px;
-    margin : 30px 500px;
+
 }
 
 a:hover {
@@ -174,14 +172,14 @@ a:hover {
 /* CONTENU - COMPETENCE */
 #competence{
     display: grid;
-    width: 70%;
-    /* height: 30%; */
+    width: 60%;
+    height: 30%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
     "bloc1 bloc2"
     "bloc3 bloc4";
-    gap: 5em;
+    gap:1em 10em;
     align-items: start;
     margin: auto;
 }
@@ -221,12 +219,13 @@ a:hover {
     color: rgb(90, 86, 86);
     text-align: center;
 }
-.source{
+#competence span{
+    display: block;
     font-size: 0.7em;
-    font-style: italic;  
+    font-style: italic;
 } 
 
-/* CONTENU - ACCOMPAGNEMENTS */
+/* CONTENU - NOS ACCOMPAGNEMENTS */
 
 #accompagnement{
     text-align: center;
@@ -239,20 +238,235 @@ a:hover {
     margin-top: 50px;
     font-size: 0.8em;
 }
+.approche span{
+    display: block;
+    font-weight: bold;
+}
 
-/* CONTENU - PEP'S */
+/* CONTENU - PEPS COMPETENCES */
 #peps{
-   
+    display: flex;
+    justify-content: space-evenly; 
 }
-.talents{
+#peps h3{
+    text-transform: uppercase;
+}
+#peps span{
+    display: block;
     position: relative;
-    order: 2;
+    width: fit-content;
 }
-.bkgblue{
-    position: absolute;
-    background-color: aqua;
-    width: 200px;
-    height: 20px;
-    order: 1;
+.card_container{
+    justify-content: center;
+}
+.talent {
+    position: relative;
+    display: inline-block;
+    text-align: center;
 }
 
+.talent::after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    bottom: 0;
+    width: 120%;
+    height: 25%; /* Hauteur du soulignement*/
+    background-color: #84d6eb;
+    z-index: -1; /* le soulignement sera derrière le texte */
+    transform: translateY(10%); /* empiètement du soulignement sur le texte */
+}
+
+.carrer {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.carrer::after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    bottom: 0;
+    width: 120%;
+    height: 25%; 
+    background-color:#ffe17a;
+    z-index: -1; 
+    transform: translateY(10%); 
+}
+
+.force {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.force::after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    bottom: 0;
+    width: 120%;
+    height: 25%; 
+    background-color: #cd84eb;
+    z-index: -1; 
+    transform: translateY(10%); 
+}
+.peps_content{
+    text-align: center;
+    list-style: none;
+    line-height: 1.2;
+
+}
+
+.btn2{
+   
+    border: 1px solid red ;
+    color: red;
+    padding: 5px 50px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    line-height: 3;
+    
+}
+
+/* CONTENU - NO REGRET ***************************************/
+#not_regret h2{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 50px 0;
+}
+.card_container{
+    display: flex;
+}
+.card_container h4{
+    font-weight: lighter;
+}
+.card_container h3{
+   padding-top: 50px;
+}
+.card{
+    border: 1px solid #84d6eb;
+    text-align: center;
+    width: 600px;
+    height: 400px;
+    padding: 0 20px;
+}
+.card p{
+    font-style: italic;
+    margin-top: 20px;
+}
+
+article img{
+    position: relative;
+    left: 42%;
+    top: 8%;
+}
+/* *******************CONTENU -  BLOG***************** */
+.title_blog{
+    text-align: center;
+    margin-top: 50px;
+}
+.card_blog{
+   display: flex;
+   justify-content: center;
+}
+.superman{
+    background-image: url(../image/Art\ 2-Blog\ 1.jpg);
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 200px;
+    align-content: center;
+}
+.blog_content{
+    justify-content: flex-start;
+    margin-left: 5rem;
+    align-content: center;
+    width: 50%;
+}
+
+.blog_content p{
+    justify-content: flex-start;
+    font-size: 0.8em;
+    line-height: 2;
+}
+.blog_content h3{
+    line-height: 0.2;
+    text-transform: uppercase;   
+}
+.fraternity{
+    background-image: url(../image/Art1-Blog\ 1.jpg);
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 200px;
+    align-content: center;
+}
+.line{
+    border-top: 2px solid #84d6eb;
+    width: 65%;
+}
+.btn_blog{
+    border: 1px solid red ;
+    color: red;
+    padding: 5px 50px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    line-height: 3;
+}
+
+/* *******************FOOTER********************* */
+
+footer{
+    background-color: rgb(211, 208, 208);
+    margin-top: 50px;
+
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+.contact img{
+    width: 5%;
+}
+.content_contact{
+    border-left: 1px solid;
+    margin-left: 40px;
+    padding-left: 40px;
+ 
+}
+.contact_us{
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.first_p{
+    font-size: 0.8em;
+    margin-bottom: 20px;
+}
+.email,.tel,.form{
+    font-size: 0.8em;
+}
+.form{
+    font-weight: bold;
+}
+.foot_banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: 0.8em;
+    
+}
+.foot_banner li{
+    border-right: 1px solid black;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.foot_banner li:last-child{
+    border-right: none; 
+}
+
+.foot_banner span{
+    font-weight: bold;
+}
