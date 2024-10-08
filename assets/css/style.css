@@ -23,7 +23,6 @@ body{
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
-    
 }
 
 .container img{
@@ -35,13 +34,14 @@ body{
     display: flex;
     
 }
-.main-menu li{
-    color: black;
+.main-menu a{
     padding-left: 20px;
     padding-right: 20px;
     border-left: 1px solid black;
     letter-spacing: -1px;
     font-family: "roboto bold";
+    color: black;
+
  
 }
 /* header - banner */
@@ -65,10 +65,6 @@ body{
     font-size: 70px;
     text-shadow: 0px 5px 7px gray;
     font-family: "roboto bold";
-}
-
-.banner a{
-
 }
 .btn {
 	background-color: rgb(255, 70, 118);
@@ -106,11 +102,13 @@ body{
     flex-direction: row;
     margin-top: 5%;
     justify-content: center;
+    width: 100%;
 }
 .photo{
     background-image: url(../image/visuel\ ntre\ approchue.jpg);
-    width:25%;
+    width:50%;
     background-repeat: no-repeat;
+    margin-left: 50px;
 }
 .souhait{
     display: flex;
@@ -169,7 +167,7 @@ a:hover {
     color: white;
   
 }
-/* CONTENU - COMPETENCE */
+/* CONTENU - les COMPETENCES */
 #competence{
     display: grid;
     width: 60%;
@@ -182,6 +180,7 @@ a:hover {
     gap:1em 10em;
     align-items: start;
     margin: auto;
+    margin-top: 50px;
 }
 .bloc1{
     grid-area: bloc1;
@@ -246,118 +245,127 @@ a:hover {
 /* CONTENU - PEPS COMPETENCES */
 #peps{
     display: flex;
-    justify-content: space-evenly; 
+    justify-content:space-between;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    margin: 50px;
 }
 #peps h3{
     text-transform: uppercase;
+    align-items: center;
 }
 #peps span{
     display: block;
     position: relative;
-    width: fit-content;
 }
 .card_container{
-    justify-content: center;
+    height: 200px;
+    width: 200px;
 }
 .talent {
     position: relative;
     display: inline-block;
     text-align: center;
+    margin: 20px;
 }
-
+.talent p{
+    line-height: 3;
+}
 .talent::after {
     content: '';
     position: absolute;
-    left: -10px;
-    bottom: 0;
-    width: 120%;
-    height: 25%; /* Hauteur du soulignement*/
+    left: 10px;
+    bottom: 230px;
+    width: 100%;
+    height: 8%; /* Hauteur du soulignement*/
     background-color: #84d6eb;
     z-index: -1; /* le soulignement sera derrière le texte */
-    transform: translateY(10%); /* empiètement du soulignement sur le texte */
+    /* transform: translateY(-30%); empiètement du soulignement sur le texte */
 }
-
 .carrer {
     position: relative;
     display: inline-block;
     text-align: center;
+    margin: 20px;
 }
-
+.carrer p{
+    line-height: 3;
+}
 .carrer::after {
     content: '';
     position: absolute;
-    left: -10px;
-    bottom: 0;
-    width: 120%;
-    height: 25%; 
-    background-color:#ffe17a;
-    z-index: -1; 
-    transform: translateY(10%); 
+    left: 10px;
+    bottom: 175px;
+    width: 100%;
+    height: 8%; /* Hauteur du soulignement*/
+    z-index: -1; /* le soulignement sera derrière le texte */
+    /* transform: translateY(-30%); empiètement du soulignement sur le texte */
+    background-color:#ffe17a;  
 }
-
 .force {
     position: relative;
     display: inline-block;
     text-align: center;
+    margin: 20px;
 }
-
+.force p{
+    line-height: 3;
+}
 .force::after {
     content: '';
     position: absolute;
-    left: -10px;
-    bottom: 0;
-    width: 120%;
-    height: 25%; 
+    left:-10px;
+    bottom: 175px;
+    width: 100%;
+    height: 8%; /* Hauteur du soulignement*/
+    z-index: -1; /* le soulignement sera derrière le texte */
+    /* transform: translateY(-30%); empiètement du soulignement sur le texte */
     background-color: #cd84eb;
-    z-index: -1; 
-    transform: translateY(10%); 
+  
 }
-.peps_content{
-    text-align: center;
-    list-style: none;
-    line-height: 1.2;
-
-}
-
 .btn2{
-   
     border: 1px solid red ;
     color: red;
     padding: 5px 50px;
     text-transform: uppercase;
     border-radius: 5px;
     line-height: 3;
-    
 }
 
 /* CONTENU - NO REGRET ***************************************/
 #not_regret h2{
     text-transform: uppercase;
     text-align: center;
-    margin: 50px 0;
+    margin-top: 50px;
 }
-.card_container{
+.card_container1{
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-.card_container h4{
+.card_container1 article{
+    margin-top: 50px;
+}
+.card_container1 h4{
     font-weight: lighter;
 }
-.card_container h3{
+.card_container1 h3{
    padding-top: 50px;
 }
 .card{
     border: 1px solid #84d6eb;
     text-align: center;
-    width: 600px;
-    height: 400px;
+    width: 450px;
+    height: 100%;
     padding: 0 20px;
+    margin: 0 20px;
 }
 .card p{
     font-style: italic;
     margin-top: 20px;
 }
 
-article img{
+.card_container1 img{
     position: relative;
     left: 42%;
     top: 8%;
@@ -365,7 +373,8 @@ article img{
 /* *******************CONTENU -  BLOG***************** */
 .title_blog{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 150px;
+    margin-bottom : 50px
 }
 .card_blog{
    display: flex;
@@ -391,7 +400,7 @@ article img{
     line-height: 2;
 }
 .blog_content h3{
-    line-height: 0.2;
+    line-height: 1;
     text-transform: uppercase;   
 }
 .fraternity{
@@ -427,7 +436,7 @@ footer{
     padding-top: 40px;
 }
 .contact img{
-    width: 5%;
+    width: 7%;
 }
 .content_contact{
     border-left: 1px solid;
@@ -470,3 +479,99 @@ footer{
 .foot_banner span{
     font-weight: bold;
 }
+
+
+/* *****************MEDIA QUEYRIES*********************** */
+
+@media screen and (max-width: 1012px){
+    #peps{
+        justify-content: center;
+        margin-top: 70px;
+    }
+    .photo{
+        width:30%;
+    }
+  
+}
+@media screen and (max-width: 860px){
+    #competence{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "bloc1"
+        "bloc2"
+        "bloc3"
+        "bloc4";  
+    }
+    .photo{
+        display: none;
+    }
+    .contact img{
+        width: 10%;
+    }
+}
+@media screen and (max-width: 630px){
+    .superman {
+        display: none;
+    }
+    .fraternity{
+        display: none;
+    } 
+    .blog_content{
+        margin-left : 0px;
+        text-align: center;
+    }
+    }
+  
+@media screen and (max-width: 630px){
+    .main-menu{
+        flex-direction: column;
+    }
+    .banner h1{
+        font-size: 2.5em;
+    }
+    .banner{
+        height: 300px;
+    }
+    .foot_banner{
+        flex-direction: column;
+        text-align: center;
+        line-height: 1.5;
+    }
+    .souhait{
+        width: 100%;
+    }
+    }
+    @media screen and (max-width: 600px){
+        .card_container1 img{
+            flex-direction: column;
+        }
+        #not_regret h2{
+            text-align: center;
+            font-size: 1.2em;
+        }
+    }
+    @media screen and (max-width: 500px){
+        .banner h1{
+            font-size: 1.8em;
+        }
+        .titresection1 p {
+            font-size: 0.7em;
+        }
+        .content_souhait {
+            padding-left: 20px;
+
+        }
+    }
+    @media screen and (max-width: 350px){
+        .banner h1{
+            font-size: 1.8em;
+        }
+        .titresection1 p {
+            font-size: 0.7em;
+        }
+        .content_souhait {
+            padding-left: 20px;
+
+        }
+    }
